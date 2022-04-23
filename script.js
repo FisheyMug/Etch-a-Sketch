@@ -37,7 +37,9 @@ let resetBtn = document.getElementById("Reset");
 resetBtn.addEventListener('click', reset);
 
 function reset() {
-        let num = prompt("Please enter the desired number of squares per side.", "16")
+        let num = prompt("Please enter the desired number of squares per side.", "16");
+        while (num>100) {num = prompt ("Please choose a number lower than or uqual to 100.");
+        };
         makeRows(num, num);
 };
 
